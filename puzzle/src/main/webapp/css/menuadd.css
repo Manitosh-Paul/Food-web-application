@@ -1,0 +1,116 @@
+@charset "ISO-8859-1";
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        :root {
+            --primary: #ff4d06;
+            --secondary: #06003b;
+            --bg: #dbdbdb;
+            --pure: #fff;
+        }
+
+        .itemadd {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .itemadd .img img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .blur {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            backdrop-filter: blur(8px);
+        }
+
+        .additemform {
+            position: absolute;
+            width: 450px;
+            height: 400px;
+            background-color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            animation: fade 1s ease-in 0s 1;
+        }
+
+        .form {
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .inputcontainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .inputcontainer label {
+            color: var(--secondary);
+        }
+
+        .inputcontainer .input {
+            height: 35px;
+            outline: none;
+            border: 1px solid var(--primary);
+            margin-top: 4px;
+            padding: 5px;
+        }
+
+        .inputcontainer span {
+            color: var(--primary);
+        }
+
+        .btn {
+            font-weight: bold;
+            color: var(--pure);
+            padding: 7px 20px;
+            outline: none;
+            border: none;
+            background-color: var(--primary);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /*hover*/
+        .btn:hover {
+            font-weight: 100;
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        /*hover*/
+        /* ------------------------------------------------------------animations------------------------------------------------------ */
+        /* animation */
+        @keyframes fade {
+            from {
+                opacity: 0;
+                width: 0;
+            }
+
+            to {
+                opacity: 1;
+                width: 400px;
+            }
+        }
